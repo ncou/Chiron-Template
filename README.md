@@ -1,13 +1,13 @@
-[![Build Status](https://travis-ci.org/ncou/Chiron.svg?branch=master)](https://travis-ci.org/ncou/Chiron)
-[![Coverage Status](https://coveralls.io/repos/github/ncou/Chiron/badge.svg?branch=master)](https://coveralls.io/github/ncou/Chiron?branch=master)
-[![CodeCov](https://codecov.io/gh/ncou/Chiron/branch/master/graph/badge.svg)](https://codecov.io/gh/ncou/Chiron)
+[![Build Status](https://travis-ci.org/ncou/Chiron-Template.svg?branch=master)](https://travis-ci.org/ncou/Chiron-Template)
+[![Coverage Status](https://coveralls.io/repos/github/ncou/Chiron-Template/badge.svg?branch=master)](https://coveralls.io/github/ncou/Chiron-Template?branch=master)
+[![CodeCov](https://codecov.io/gh/ncou/Chiron-Template/branch/master/graph/badge.svg)](https://codecov.io/gh/ncou/Chiron-Template)
 
-[![Latest Stable Version](https://poser.pugx.org/chiron/chiron/v/stable.png)](https://packagist.org/packages/chiron/chiron)
-[![Total Downloads](https://img.shields.io/packagist/dt/chiron/chiron.svg?style=flat-square)](https://packagist.org/packages/chiron/chiron/stats)
-[![Monthly Downloads](https://img.shields.io/packagist/dm/chiron/chiron.svg?style=flat-square)](https://packagist.org/packages/chiron/chiron/stats)
+[![Latest Stable Version](https://poser.pugx.org/chiron/template/v/stable.png)](https://packagist.org/packages/chiron/template)
+[![Total Downloads](https://img.shields.io/packagist/dt/chiron/template.svg?style=flat-square)](https://packagist.org/packages/chiron/template/stats)
+[![Monthly Downloads](https://img.shields.io/packagist/dm/chiron/template.svg?style=flat-square)](https://packagist.org/packages/chiron/template/stats)
 
-[![StyleCI](https://styleci.io/repos/125737330/shield?style=flat)](https://styleci.io/repos/125737330)
-[![PHP-Eye](https://php-eye.com/badge/chiron/chiron/tested.svg?style=flat)](https://php-eye.com/package/chiron/chiron)
+[![StyleCI](https://styleci.io/repos/147123086/shield?style=flat)](https://styleci.io/repos/147123086)
+[![PHP-Eye](https://php-eye.com/badge/chiron/template/tested.svg?style=flat)](https://php-eye.com/package/chiron/template)
 [![PHPStan](https://img.shields.io/badge/PHPStan-enabled-brightgreen.svg?style=flat)](https://github.com/phpstan/phpstan)
 
 Template Interface
