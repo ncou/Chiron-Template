@@ -6,7 +6,6 @@ namespace Chiron\Tests\Views;
 
 use PHPUnit\Framework\TestCase;
 
-
 class AttributesTraitTest extends TestCase
 {
     /**
@@ -18,7 +17,6 @@ class AttributesTraitTest extends TestCase
 
     /**
      * Setup the tests.
-     *
      */
     protected function setUp()
     {
@@ -57,7 +55,7 @@ class AttributesTraitTest extends TestCase
         $this->assertEquals('bar', $this->object->getAttribute('foo'));
     }
 
-    /**
+    /*
      * @coversDefaultClass  setAttributes
      */
     /*
