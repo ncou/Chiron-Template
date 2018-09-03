@@ -7,7 +7,7 @@ namespace Chiron\Views;
 /**
  * Interface defining required template capabilities.
  */
-interface ViewInterface
+interface TemplateRendererInterface
 {
     /**
      * Render a template, optionally with parameters.
@@ -31,7 +31,7 @@ interface ViewInterface
     /**
      * Retrieve configured paths from the engine.
      *
-     * @return ViewPath[]
+     * @return TemplatePath[]
      */
     public function getPaths(): array;
 

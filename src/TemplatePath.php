@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Chiron\Views;
 
-class ViewPath
+class TemplatePath
 {
     /**
      * @var string

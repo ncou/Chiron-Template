@@ -14,14 +14,14 @@ trait AttributesTrait
         return $this->attributes;
     }
 
-    public function setAttributes(array $attributes): ViewInterface
+    public function setAttributes(array $attributes): TemplateRendererInterface
     {
         $this->attributes = $attributes;
 
         return $this;
     }
 
-    public function unsetAttributes(): ViewInterface
+    public function unsetAttributes(): TemplateRendererInterface
     {
         $this->setAttributes([]);
 
@@ -32,7 +32,7 @@ trait AttributesTrait
      * @param string $key
      * @param mixed  $value
      */
-    public function addAttribute(string $key, $value): ViewInterface
+    public function addAttribute(string $key, $value): TemplateRendererInterface
     {
         $this->attributes[$key] = $value;
 
@@ -47,7 +47,7 @@ trait AttributesTrait
         return $this->attributes[$key];
     }
 
-    public function removeAttribute(string $key): ViewInterface
+    public function removeAttribute(string $key): TemplateRendererInterface
     {
         unset($this->attributes[$key]);
 
