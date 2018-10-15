@@ -6,10 +6,9 @@ namespace Chiron\Views;
 
 trait AttributesTrait
 {
-    /** @var array */
     private $attributes = [];
 
-    public function getAttributes()
+    public function getAttributes(): array
     {
         return $this->attributes;
     }
@@ -40,6 +39,7 @@ trait AttributesTrait
     }
 
     /**
+     * @param string $key
      * @return mixed
      */
     public function getAttribute(string $key)

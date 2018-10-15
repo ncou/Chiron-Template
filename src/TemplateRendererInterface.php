@@ -44,7 +44,7 @@ interface TemplateRendererInterface
      */
     public function exists(string $name): bool;
 
-    public function getAttributes();
+    public function getAttributes(): array;
 
     public function setAttributes(array $attributes): self;
 
@@ -57,4 +57,8 @@ interface TemplateRendererInterface
     public function removeAttribute(string $key): self;
 
     public function hasAttribute(string $key): bool;
+
+    public function getExtension(): string;
+
+    public function setExtension(string $extension): self
 }
