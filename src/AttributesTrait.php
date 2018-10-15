@@ -40,6 +40,7 @@ trait AttributesTrait
 
     /**
      * @param string $key
+     *
      * @return mixed
      */
     public function getAttribute(string $key)
