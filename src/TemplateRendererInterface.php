@@ -60,5 +60,5 @@ interface TemplateRendererInterface
 
     public function getExtension(): string;
 
-    public function setExtension(string $extension): self
+    public function setExtension(string $extension): self;
 }
