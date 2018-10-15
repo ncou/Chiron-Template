@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Chiron\Tests\Views;
 
-use PHPUnit\Framework\TestCase;
 use Chiron\Views\TemplatePath;
+use PHPUnit\Framework\TestCase;
 
 class TemplatePathTest extends TestCase
 {
@@ -15,12 +15,14 @@ class TemplatePathTest extends TestCase
         $this->assertEquals('/tmp', $templatePath->getPath());
         $this->assertEquals('test', $templatePath->getNamespace());
     }
+
     public function testCanInstantiateWithoutANamespace()
     {
         $templatePath = new TemplatePath('/tmp');
         $this->assertEquals('/tmp', $templatePath->getPath());
         $this->assertEmpty($templatePath->getNamespace());
     }
+
     public function testCastingToStringReturnsPathOnly()
     {
         $templatePath = new TemplatePath('/tmp');

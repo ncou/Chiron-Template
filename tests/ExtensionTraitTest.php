@@ -39,7 +39,7 @@ class ExtensionTraitTest extends TestCase
         $this->assertEquals('html', $this->object->getExtension());
     }
 
-    /**
+    /*
      * @coversDefaultClass  setExtension
      */
     /*
