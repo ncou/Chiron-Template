@@ -55,6 +55,15 @@ class AttributesTraitTest extends TestCase
     }
 
     /**
+     * @coversDefaultClass  addAttribute
+     */
+    public function testAddAttribute()
+    {
+        $this->class->addAttribute('foo', 'bar');
+        $this->assertEquals('bar', $this->class->getAttribute('foo'));
+    }
+
+    /**
      * @coversDefaultClass  getAttribute
      */
     public function testGetAttribute()
