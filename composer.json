@@ -18,7 +18,7 @@
         }
     },
     "autoload-dev" : {
-        "psr-4": { "Chiron\\Tests\\" : "tests/" }
+        "psr-4": { "Chiron\\Views\\Tests\\" : "tests/" }
     },
     "scripts": {
         "test": [

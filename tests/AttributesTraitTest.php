@@ -2,25 +2,21 @@
 
 declare(strict_types=1);
 
-namespace Chiron\Tests\Views;
+namespace Chiron\Views\Tests;
 
 use PHPUnit\Framework\TestCase;
+use Chiron\Views\Tests\Fixtures\TemplateRendererMock;
 
 class AttributesTraitTest extends TestCase
 {
-    /**
-     * Holds the Container instance for testing.
-     *
-     * @var \Chiron\Container\ContainerAwareTrait
-     */
-    protected $object;
+    protected $class;
 
     /**
      * Setup the tests.
      */
     protected function setUp()
     {
-        $this->object = $this->getObjectForTrait('\\Chiron\\Views\\AttributesTrait');
+        $this->class = new TemplateRendererMock();
     }
 
     /**
@@ -28,7 +24,7 @@ class AttributesTraitTest extends TestCase
      */
     protected function tearDown()
     {
-        $this->object = null;
+        $this->class = null;
     }
 
     /**
@@ -36,11 +32,26 @@ class AttributesTraitTest extends TestCase
      */
     public function testGetAttributes()
     {
-        $reflection = new \ReflectionClass($this->object);
-        $refProp = $reflection->getProperty('attributes');
-        $refProp->setAccessible(true);
-        $refProp->setValue($this->object, ['foo' => 'bar']);
-        $this->assertArrayHasKey('foo', $this->object->getAttributes());
+        $this->assertEmpty($this->class->getAttributes());
+    }
+
+    /**
+     * @coversDefaultClass  setAttributes
+     */
+    public function testSetAttributes()
+    {
+        $this->class->setAttributes(['foo' => 'bar']);
+        $this->assertArrayHasKey('foo', $this->class->getAttributes());
+    }
+
+    /**
+     * @coversDefaultClass  unsetAttributes
+     */
+    public function testUnsetAttributes()
+    {
+        $this->class->setAttributes(['foo' => 'bar']);
+        $this->class->unsetAttributes();
+        $this->assertEmpty($this->class->getAttributes());
     }
 
     /**
@@ -48,25 +59,28 @@ class AttributesTraitTest extends TestCase
      */
     public function testGetAttribute()
     {
-        $reflection = new \ReflectionClass($this->object);
-        $refProp = $reflection->getProperty('attributes');
-        $refProp->setAccessible(true);
-        $refProp->setValue($this->object, ['foo' => 'bar']);
-        $this->assertEquals('bar', $this->object->getAttribute('foo'));
+        $this->class->setAttributes(['foo' => 'bar']);
+        $this->assertEquals('bar', $this->class->getAttribute('foo'));
     }
 
-    /*
-     * @coversDefaultClass  setAttributes
+    /**
+     * @coversDefaultClass  removeAttribute
      */
-    /*
-    public function testSetAttributes()
+    public function testRemoveAttribute()
     {
-        $this->object->setAttributes(['foo' => 'bar']);
-        $reflection = new \ReflectionClass($this->object);
-        $refProp = $reflection->getProperty('attributes');
-        $refProp->setAccessible(true);
-        $attributes = $refProp->getValue($this->object);
-        die(var_dump($attributes));
-        $this->assertArrayHasKey('foo', $attributes);
-    }*/
+        $this->class->setAttributes(['foo' => 'bar']);
+        $this->class->removeAttribute('foo');
+        $this->assertArrayNotHasKey('foo', $this->class->getAttributes());
+    }
+
+    /**
+     * @coversDefaultClass  hasAttribute
+     */
+    public function testHasAttribute()
+    {
+        $this->class->setAttributes(['foo' => 'bar']);
+        $this->assertTrue($this->class->hasAttribute('foo'));
+        $this->assertFalse($this->class->hasAttribute('noop'));
+    }
+
 }

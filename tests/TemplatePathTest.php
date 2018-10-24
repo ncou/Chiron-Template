@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Chiron\Tests\Views;
+namespace Chiron\Views\Tests;
 
 use Chiron\Views\TemplatePath;
 use PHPUnit\Framework\TestCase;

@@ -2,25 +2,21 @@
 
 declare(strict_types=1);
 
-namespace Chiron\Tests\Views;
+namespace Chiron\Views\Tests;
 
 use PHPUnit\Framework\TestCase;
+use Chiron\Views\Tests\Fixtures\TemplateRendererMock;
 
 class ExtensionTraitTest extends TestCase
 {
-    /**
-     * Holds the Container instance for testing.
-     *
-     * @var \Chiron\Container\ContainerAwareTrait
-     */
-    protected $object;
+    protected $class;
 
     /**
      * Setup the tests.
      */
     protected function setUp()
     {
-        $this->object = $this->getObjectForTrait('\\Chiron\\Views\\ExtensionTrait');
+        $this->class = new TemplateRendererMock();
     }
 
     /**
@@ -28,7 +24,7 @@ class ExtensionTraitTest extends TestCase
      */
     protected function tearDown()
     {
-        $this->object = null;
+        $this->class = null;
     }
 
     /**
@@ -36,16 +32,15 @@ class ExtensionTraitTest extends TestCase
      */
     public function testGetExtensionDefaultValue()
     {
-        $this->assertEquals('html', $this->object->getExtension());
+        $this->assertEquals('html', $this->class->getExtension());
     }
 
     /*
      * @coversDefaultClass  setExtension
      */
-    /*
     public function testSetExtension()
     {
-        $this->object->setExtension('tpl');
-        $this->assertEquals('tpl', $this->object->getExtension());
-    }*/
+        $this->class->setExtension('tpl');
+        $this->assertEquals('tpl', $this->class->getExtension());
+    }
 }
