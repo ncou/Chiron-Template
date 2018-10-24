@@ -16,5 +16,4 @@ Template Interface
     $ composer require chiron/template
     
 TODO 
-- Add more tests
 - Allow to add some attributes restricted on a given namespace.
