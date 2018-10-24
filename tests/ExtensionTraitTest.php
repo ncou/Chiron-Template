@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Chiron\Views\Tests;
 
-use PHPUnit\Framework\TestCase;
 use Chiron\Views\Tests\Fixtures\TemplateRendererMock;
+use PHPUnit\Framework\TestCase;
 
 class ExtensionTraitTest extends TestCase
 {

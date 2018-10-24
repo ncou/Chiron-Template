@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace Chiron\Views\Tests;
 
-use PHPUnit\Framework\TestCase;
 use Chiron\Views\Tests\Fixtures\TemplateRendererMock;
+use PHPUnit\Framework\TestCase;
 
 class AttributesTraitTest extends TestCase
 {
@@ -82,5 +82,4 @@ class AttributesTraitTest extends TestCase
         $this->assertTrue($this->class->hasAttribute('foo'));
         $this->assertFalse($this->class->hasAttribute('noop'));
     }
-
 }
