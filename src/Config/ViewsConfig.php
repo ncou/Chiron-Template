@@ -16,12 +16,12 @@ class ViewsConfig extends AbstractInjectableConfig
     protected function getConfigSchema(): Schema
     {
         return Expect::structure([
-            'extension' => Expect::string()->default('phtml'),
-            'paths' => Expect::arrayOf('string')->default([directory('@views')]),
+            'extension' => Expect::string()->nullable(),
+            'paths' => Expect::arrayOf('string'),
         ]);
     }
 
-    public function getExtension(): string
+    public function getExtension(): ?string
     {
         return $this->get('extension');
     }

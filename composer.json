@@ -29,6 +29,14 @@
         "phpstan": "phpstan analyse src --level=0",
         "test-coverage": "phpunit --coverage-clover clover.xml"
     },
+    "extra": {
+        "chiron": {
+            "bootloaders": [
+                "Chiron\\Views\\Bootloader\\PublishViewsBootloader",
+                "Chiron\\Views\\Bootloader\\ViewBootloader"
+            ]
+        }
+    },
     "minimum-stability": "dev",
     "prefer-stable": true
 }

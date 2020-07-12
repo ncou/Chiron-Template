@@ -6,7 +6,7 @@ namespace Chiron\Views;
 
 trait ExtensionTrait
 {
-    private $extension = 'html';
+    //protected $extension = 'html';
 
     public function getExtension(): string
     {
