@@ -9,6 +9,7 @@ use Nette\Schema\Schema;
 use Chiron\Config\AbstractInjectableConfig;
 use Chiron\Config\InjectableInterface;
 
+// TODO : passer les classes de "Config" en final !!!!
 class ViewsConfig extends AbstractInjectableConfig
 {
     protected const CONFIG_SECTION_NAME = 'views';
@@ -17,7 +18,7 @@ class ViewsConfig extends AbstractInjectableConfig
     {
         return Expect::structure([
             'extension' => Expect::string()->nullable(),
-            'paths' => Expect::arrayOf('string'),
+            'paths' => Expect::arrayOf('string')->default([directory('@views')]),
         ]);
     }
 

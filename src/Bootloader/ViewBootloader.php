@@ -19,7 +19,7 @@ final class ViewBootloader extends AbstractBootloader
 
         // add template paths
         foreach ($config->getPaths() as $namespace => $paths) {
-            // TODO : créer une constante EMPTY_NAMESPACE dans la classe TemplateRendrerInterface ??? ca serai plus propre que d'utiliser directement "null" dans le code ci dessous !!!
+            // TODO : créer une constante EMPTY_NAMESPACE dans la classe TemplateRenderInterface ??? ca serai plus propre que d'utiliser directement "null" dans le code ci dessous !!!
             $namespace = is_int($namespace) ? null : $namespace;
 
             foreach ((array) $paths as $path) {
