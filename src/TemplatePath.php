@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Chiron\Views;
 
+// TODO : il faudrait pas créer une méthode hasNamespace(): bool ????
 class TemplatePath
 {
     /**

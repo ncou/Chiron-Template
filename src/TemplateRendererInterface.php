@@ -18,6 +18,7 @@ interface TemplateRendererInterface
      * @param string $name
      * @param array  $params
      */
+    // TODO : changer le nom des paramétres pour utiliser "$template" et "$parameters". Il faudra aussi changer le package "chiron/template" en "chiron/views" !!!!
     public function render(string $name, array $params = []): string;
 
     /**
@@ -26,7 +27,7 @@ interface TemplateRendererInterface
      * Adds a template path, with optional namespace the templates in that path
      * provide.
      */
-    public function addPath(string $path, string $namespace = null): void;
+    public function addPath(string $path, ?string $namespace = null): void;
 
     /**
      * Retrieve configured paths from the engine.

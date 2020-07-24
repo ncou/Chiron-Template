@@ -33,7 +33,8 @@
         "chiron": {
             "bootloaders": [
                 "Chiron\\Views\\Bootloader\\PublishViewsBootloader",
-                "Chiron\\Views\\Bootloader\\ViewBootloader"
+                "Chiron\\Views\\Bootloader\\ViewsCommandBootloader",
+                "Chiron\\Views\\Bootloader\\ViewsBootloader"
             ]
         }
     },
