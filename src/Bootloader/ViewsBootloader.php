@@ -33,5 +33,7 @@ final class ViewsBootloader extends AbstractBootloader
                 $renderer->addPath($path, $namespace);
             }
         }
+
+        // TODO : ca serait bien de récupérer aussi la classe HttpConfig (attention à voir si il n'y a pas un risque que cette classe n'existe pas quand on aura séparé les packages http et chiron, car il y a un risque que l'utilisateur install chiron+le package template mais pas le package http, mais je pense que ce risque est faible !!!!) pour injecter dans les variables Globals (attributes) du TemplateRendererInterface la valeur du "base_path" car on pourrait en avoir besoin dans les templates twig ou autre pour construire une URL (on utiliserai donc la notation : { base_path ~ '/assets/image.png'}) par exemple. De mémoire c'est ce que fait Drupal !!!
     }
 }

@@ -9,8 +9,7 @@ use Nette\Schema\Schema;
 use Chiron\Config\AbstractInjectableConfig;
 use Chiron\Config\InjectableInterface;
 
-// TODO : passer les classes de "Config" en final !!!!
-class ViewsConfig extends AbstractInjectableConfig
+final class ViewsConfig extends AbstractInjectableConfig
 {
     protected const CONFIG_SECTION_NAME = 'views';
 
